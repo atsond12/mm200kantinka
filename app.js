@@ -1,5 +1,4 @@
 const express = require('express');
-const favicon = require('serve-favicon');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
@@ -17,6 +16,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 module.exports = app;
